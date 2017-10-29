@@ -40,8 +40,9 @@ local core = require "lanes.core"
 -- Lua 5.2: module() is gone
 -- almost everything module() does is done by require() anyway
 -- -> simply create a table, populate it, return it, and be done
+local lanes = {}
 local lanesMeta = {}
-local lanes = setmetatable( {}, lanesMeta)
+setmetatable(lanes,lanesMeta)
 
 -- this function is available in the public interface until it is called, after which it disappears
 lanes.configure = function( settings_)
@@ -54,7 +55,7 @@ lanes.configure = function( settings_)
 		error( "To use 'lanes', you will also need to have 'string' available.", 2)
 	end
 	-- Configure called so remove metatable from lanes
-	setmetatable( lanes, nil)
+	setmetatable(lanes,nil)
 	-- 
 	-- Cache globals for code that might run under sandboxing
 	--
@@ -77,7 +78,7 @@ lanes.configure = function( settings_)
 		demote_full_userdata = nil,
 		verbose_errors = false,
 		-- LuaJIT provides a thread-unsafe allocator by default, so we need to protect it when used in parallel lanes
-		protect_allocator = (package.loaded.jit and jit.version) and true or false
+		protect_allocator = (jit and jit.version) and true or false
 	}
 	local boolean_param_checker = function( val_)
 		-- non-'boolean-false' should be 'boolean-true' or nil
@@ -138,7 +139,7 @@ lanes.configure = function( settings_)
 		author= "Asko Kauppi <akauppi@gmail.com>, Benoit Germain <bnt.germain@gmail.com>",
 		description= "Running multiple Lua states in parallel",
 		license= "MIT/X11",
-		copyright= "Copyright (c) 2007-10, Asko Kauppi; (c) 2011-17, Benoit Germain",
+		copyright= "Copyright (c) 2007-10, Asko Kauppi; (c) 2011-13, Benoit Germain",
 		version = assert( core.version)
 	}
 
@@ -219,9 +220,6 @@ lanes.configure = function( settings_)
 		["debug"] = true,
 		["bit32"] = true, -- Lua 5.2 only, ignored silently under 5.1
 		["utf8"] = true, -- Lua 5.3 only, ignored silently under 5.1 and 5.2
-		["bit"] = true, -- LuaJIT only, ignored silently under PUC-Lua
-		["jit"] = true, -- LuaJIT only, ignored silently under PUC-Lua
-		["ffi"] = true, -- LuaJIT only, ignored silently under PUC-Lua
 		--
 		["base"] = true,
 		["coroutine"] = true, -- part of "base" in Lua 5.1
@@ -715,7 +713,6 @@ lanes.configure = function( settings_)
 
 	-- activate full interface
 	lanes.require = core.require
-	lanes.register = core.register
 	lanes.gen = gen
 	lanes.linda = core.linda
 	lanes.cancel_error = core.cancel_error
@@ -734,18 +731,20 @@ lanes.configure = function( settings_)
 	return lanes
 end -- lanes.configure
 
-lanesMeta.__index = function( t, k)
+lanesMeta.__index = function(t,k)
 	-- This is called when some functionality is accessed without calling configure()
-	lanes.configure() -- initialize with default settings
+	lanes.configure()	-- Initialize with default settings
 	-- Access the required key
 	return lanes[k]
 end
 
--- no need to force calling configure() manually excepted the first time (other times will reuse the internally stored settings of the first call)
+-- no need to force calling configure() excepted the first time
 if core.settings then
 	return lanes.configure()
 else
 	return lanes
 end
 
---the end
+
+--the end (Unreachable Code)
+--return lanes
