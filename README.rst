@@ -3,11 +3,13 @@ lanes
 
 .. code-block::
 
- author : Asko Kauppi <akauppi@gmail.com>, Benoit Germain <bnt.germain@gmail.com>
- version: 3.10.1
- website: https://github.com/LuaLanes/lanes
+ author   : Asko Kauppi <akauppi@gmail.com>, Benoit Germain <bnt.germain@gmail.com>
+ version  : 3.10.1
+ website  : https://github.com/LuaLanes/lanes
  documentation: http://lualanes.github.io/lanes
- license: MIT/X11 
+ license  : MIT/X11 
+ arch     : x64, x86
+ binaries : windows, linux
 
 Running multiple Lua states in parallel.
 
