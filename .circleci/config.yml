@@ -17,11 +17,3 @@ jobs:
           name: Start Lide tests
           command: |
             $LIDE_PATH/lide.sh install lanes &&
-            $LIDE_PATH/lide.sh tests/appendud.lua &&
-            $LIDE_PATH/lide.sh tests/argtable.lua &&
-            $LIDE_PATH/lide.sh tests/assert.lua &&
-            $LIDE_PATH/lide.sh tests/atexit.lua &&
-            $LIDE_PATH/lide.sh tests/atomic.lua &&
-            $LIDE_PATH/lide.sh tests/basic.lua &&
-            $LIDE_PATH/lide.sh tests/cancel.lua
-          background: true
