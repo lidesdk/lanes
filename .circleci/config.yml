@@ -15,7 +15,7 @@ jobs:
             chmod +x $PWD/commandline/bin/linux/x64/lua
       - run:
           name: Install lanes from lide
-          command: $LIDE_PATH/lide.sh install lanes
+          command: echo $LIDE_PATH && $LIDE_PATH/lide.sh install lanes
 
       - run: $LIDE_PATH/lide.sh tests/appendud.lua
       - run: $LIDE_PATH/lide.sh tests/argtable.lua
