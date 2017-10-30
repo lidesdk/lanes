@@ -6,10 +6,9 @@ lanes
  author   : Asko Kauppi <akauppi@gmail.com>, Benoit Germain <bnt.germain@gmail.com>
  version  : 3.10.1
  website  : https://github.com/LuaLanes/lanes
- documentation: http://lualanes.github.io/lanes
- license  : MIT/X11 
  arch     : x64, x86
  binaries : windows, linux
+ license  : MIT/X11 
 
 Running multiple Lua states in parallel.
 
@@ -19,7 +18,9 @@ Running multiple Lua states in parallel.
  .. image:: https://circleci.com/gh/lidesdk/lanes/tree/master.svg?style=svg                   .. image:: https://circleci.com/gh/lidesdk/lanes/tree/master.svg?style=svg         
 ==========================================================================================  ===============================================================================            
 
-
+==================  ================================================================================
+  Documentation:     http://lualanes.github.io/lanes
+==================  ================================================================================
 
 ----------------------------------------------------------------------------------------------------
 
