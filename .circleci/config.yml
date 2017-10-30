@@ -6,6 +6,7 @@ jobs:
     steps:
       - checkout
       - run: sudo apt-get install lua5.1 luarocks
+      - run: export LIDE_PATH=$PWD/commandline
       - run:
           name: Download Lide shell
           command: |
