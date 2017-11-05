@@ -16,7 +16,7 @@ Running multiple Lua states in parallel.
    Linux                                                                                       Windows
 ==========================================================================================  ===============================================================================            
  .. image:: https://circleci.com/gh/lidesdk/lanes/tree/package.lide.svg?style=svg            .. image:: https://circleci.com/gh/lidesdk/lanes/tree/package.lide.svg?style=svg
-    :target: https://circleci.com/gh/lidesdk/lanes/tree/package.lide                            :target: https://circleci.com/gh/lidesdk/lanes/tree/package.lide
+ :target: https://circleci.com/gh/lidesdk/lanes/tree/package.lide                            :target: https://circleci.com/gh/lidesdk/lanes/tree/package.lide
 ==========================================================================================  ===============================================================================            
 
 ==================  ================================================================================
