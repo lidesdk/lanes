@@ -40,7 +40,7 @@ THE SOFTWARE.
 
 module( "lanes", package.seeall )
 
-require "lua51-lanes"
+require "lanes"
 assert( type(lanes)=="table" )
 
 local mm= lanes
