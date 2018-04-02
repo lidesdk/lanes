@@ -1,11 +1,11 @@
 [lanes]
 author        = Asko Kauppi <akauppi@gmail.com>, Benoit Germain <bnt.germain@gmail.com>
 date          = 2017-03-19
-version       = 3.10.1
-windows       = x86:windows/x86/clibs/lanes/core.dll,windows/x86/lua/lanes.lua
+version       = 2.0.4
+windows       = x86:windows/x86/clibs/lua51-lanes.dll,windows/x86/lua/lanes.lua
 linux         = x64:linux/x64/clibs/lanes/core.so,linux/x64/lua/lanes.lua|x86:linux/x86/clibs/lanes/core.so,linux/x86/lua/lanes.lua
 source        = https://github.com/LuaLanes/lanes
 documentation = https://rawgit.com/LuaLanes/lanes/v3.10.1/docs/index.html
 mantainer     = Lide Team
 description   = Running multiple Lua states in parallel
-comments      = (Current x64 linux use: 3.9.4)
+comments      = (Current x64 linux use: 3.9.4), Windows XP 2.0.4 approved
