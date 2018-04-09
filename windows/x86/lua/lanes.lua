@@ -40,7 +40,7 @@ THE SOFTWARE.
 
 module( "lanes", package.seeall )
 
-require "lanes"
+require "lua51-lanes"
 assert( type(lanes)=="table" )
 
 local mm= lanes
@@ -201,7 +201,7 @@ local lane_mt= {
 --
 -- 'opt': .priority:  int (-2..+2) smaller is lower priority (0 = default)
 --
---	      .cancelstep: bool | uint
+--        .cancelstep: bool | uint
 --            false: cancellation check only at pending Linda operations
 --                   (send/receive) so no runtime performance penalty (default)
 --            true:  adequate cancellation check (same as 100)
