@@ -4,13 +4,16 @@ lanes
 .. code-block::
 
  author   : Asko Kauppi <akauppi@gmail.com>, Benoit Germain <bnt.germain@gmail.com>
- version  : 3.10.1
+ version  : 2.0.3
  website  : https://github.com/LuaLanes/lanes
- arch     : x64, x86
- binaries : windows, linux
- license  : MIT/X11 
+ license  : MIT/X11
 
 Running multiple Lua states in parallel.
+
+.. code-block::
+
+  architectures:     x86
+  platforms:         windows
 
 ====================================================================================  ======================================================================================
  Linux                                                                                  https://circleci.com/gh/lidesdk/lanes/tree/package.lide
