@@ -21,10 +21,10 @@ test:
       # Default lua interpreter
       - chmod +x $PWD/shell/bin/linux/x64/lua
       - chmod +x $PWD/shell/lide.sh
-      
+
     # Preparing environment:
 
-      - $LIDE_PATH/lide.sh install lanes        
+      - $LIDE_PATH/lide.sh install lanes 3.9.4       
 
     # Executing tests:
 
