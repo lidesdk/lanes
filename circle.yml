@@ -12,15 +12,16 @@ test:
       # zip needs libzzip-0.so.13
 
       # Install latest framework version from master:
-      - git clone https://github.com/lidesdk/commandline.git $PWD/commandline --recursive
+      - git clone https://github.com/lidesdk/shell.git $PWD/shell --recursive
 
       # Runtime system libraries /usr/lib/x86_64-linux-gnu/
-      - sudo cp $PWD/commandline/clibs/linux/x64/pcaf_libstdc++.so.6 /usr/lib/x86_64-linux-gnu/libstdc++.so.6
-      - sudo cp $PWD/commandline/clibs/linux/x64/pcaf_libzzip-0.so.13 /usr/lib/x86_64-linux-gnu/libzzip-0.so.13 
+      - sudo cp $PWD/shell/clibs/linux/x64/pcaf_libstdc++.so.6 /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+      - sudo cp $PWD/shell/clibs/linux/x64/pcaf_libzzip-0.so.13 /usr/lib/x86_64-linux-gnu/libzzip-0.so.13 
 
       # Default lua interpreter
-      - chmod +x $PWD/commandline/bin/linux/x64/lua
-
+      - chmod +x $PWD/shell/bin/linux/x64/lua
+      - chmod +x $PWD/shell/lide.sh
+      
     # Preparing environment:
 
       - $LIDE_PATH/lide.sh install lanes        
