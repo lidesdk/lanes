@@ -8,4 +8,4 @@ documentation = https://rawgit.com/LuaLanes/lanes/v3.9.4/docs/index.html
 mantainer     = Lide Team
 description   = Running multiple Lua states in parallel
 license       = MIT/X11
-compatibility = 3.0.1
+compatibility = 2.0.3
