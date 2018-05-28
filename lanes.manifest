@@ -3,6 +3,7 @@ author        = Asko Kauppi <akauppi@gmail.com>, Benoit Germain <bnt.germain@gma
 date          = 2018-05-06
 version       = 3.9.4
 linux         = x64:linux/x64/clibs/lanes/core.so,linux/x64/lua/lanes.lua
+windows       = x86:linux/x64/clibs/lanes/core.so
 source        = https://github.com/LuaLanes/lanes
 documentation = https://rawgit.com/LuaLanes/lanes/v3.9.4/docs/index.html 
 mantainer     = Lide Team
