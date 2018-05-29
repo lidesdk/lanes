@@ -2,7 +2,7 @@
 author        = Asko Kauppi <akauppi@gmail.com>, Benoit Germain <bnt.germain@gmail.com>
 date          = 2018-04-09
 version       = 2.0.3
-windows       = x86:windows/x86/clibs/lua51-lanes.dll,windows/x86/lua/lanes.lua
+windows       = x86:windows/x86/lua/lanes.lua, windows/x86/clibs/lua51-lanes.dll
 source        = https://github.com/LuaLanes/lanes
 documentation = https://rawgit.com/LuaLanes/lanes/v2.0.3/docs/index.html 
 mantainer     = Lide Team
